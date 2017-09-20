@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.hzm.hz.mapper.UserRolePermissionMapper">
+   <select id="findUserByName" parameterType="String" resultType="cn.hzm.hz.entity.User">
+  select id id,username username,password password from sys_users where username=#{username}
+   </select>
+
+   <select id="findRoles" parameterType="String" resultType="String">
+   select role from sys_roles where id in
+   (select role_id from sys_users_roles where user_id=
+      (
+       select id from sys_users where username=#{username}
+       )
+    )
+   </select>
+   
+   <select id="findPermissions" parameterType="String" resultType="String">
+   
+   select permission from sys_permissions where id in 
+   (
+     select permission_id from sys_roles_permissions where role_id in
+	   (select role_id from sys_users_roles where user_id=
+	      (
+	       select id from sys_users where username=#{username}
+	       )
+	    )
+	)
+   </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</mapper>
