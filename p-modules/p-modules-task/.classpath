@@ -29,5 +29,8 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/p-common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/p-intf"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/p-service"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -3,6 +3,8 @@
 	<name>p-service</name>
 	<comment></comment>
 	<projects>
+		<project>p-intf</project>
+		<project>p-common</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

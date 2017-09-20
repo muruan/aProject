@@ -18,6 +18,5 @@ public class MatterServiceTest extends BaseTest{
     	for(Matter m:list){
     		System.out.println(m);
     	}
-    	 System.err.println(1);
      }
 }

@@ -2,5 +2,11 @@
     <wb-module deploy-name="p-service">
         <wb-resource deploy-path="/" source-path="/src/main/java"/>
         <wb-resource deploy-path="/" source-path="/src/main/resources"/>
+        <dependent-module archiveName="p-intf.jar" deploy-path="/" handle="module:/resource/p-intf/p-intf">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="p-common.jar" deploy-path="/" handle="module:/resource/p-common/p-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
     </wb-module>
 </project-modules>

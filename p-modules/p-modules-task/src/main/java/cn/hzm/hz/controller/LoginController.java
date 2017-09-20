@@ -1,4 +1,4 @@
-package cn.hzm.hz.task.controller;
+package cn.hzm.hz.controller;
 
 import javax.annotation.Resource;
 
