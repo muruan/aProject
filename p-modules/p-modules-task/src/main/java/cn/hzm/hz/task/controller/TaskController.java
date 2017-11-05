@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class TaskController {
 
-	@RequestMapping(value="/index")
+	@RequestMapping("/index")
 	public String taskIndex(){
 		return "/work_index";
 	}

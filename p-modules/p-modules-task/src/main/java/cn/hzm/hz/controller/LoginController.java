@@ -34,7 +34,6 @@ public class LoginController {
     }    
         
     @RequestMapping(value="/login",method=RequestMethod.POST) 
-
 	public String login(User user,Model model){
 		 try {                
 	            //使用权限工具进行用户登录，登录成功后跳到shiro配置的successUrl中，与下面的return没什么关系！    
