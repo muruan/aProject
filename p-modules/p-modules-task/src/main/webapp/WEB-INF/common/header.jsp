@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
+</head>
 <body>
 	    <nav class="navbar navbar-inverse navbar-fixed-top">
 	     <div class="container" id="navName">
@@ -6,7 +7,10 @@
 	     		<a href="#" class="navbar-brand">欢迎来到本公司</a>	     		
 	     	</div>	
 	     	<ul class="nav navbar-nav navbar-right">
-	            <li v-for="value in json" v-bind:class="{active:activeName==value}" v-on:click="addActive(value)"><a href="#">{{value}}</a></li>
+	            <li id=nav0><a href="#">部门事宜</a></li>
+	            <li id=nav1><a href="#">我的任务</a></li>
+	            <li id=nav2 ><a href="#">我布置的任务</a></li>
+	            <li id=nav3 ><a href="#">考勤</a></li>	                   
             </ul>	     	
 	     </div>   
 	  	</nav>
