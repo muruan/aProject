@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 
 	   <!--采用container-fluid，使得整个页尾的宽度为100%，并设置它的背景色-->
-		<footer class="container-fluid foot-wrap">
+		<footer class="container-fluid foot-wrap" style="background:black;">
 		    <!--采用container，使得页尾内容居中 -->
 		        <div class="container">
 		            <div class="row">

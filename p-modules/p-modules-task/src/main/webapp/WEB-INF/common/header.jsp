@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 </head>
 <body>
-	    <nav class="navbar navbar-inverse navbar-fixed-top">
+	    <nav class="navbar navbar-inverse">
 	     <div class="container" id="navName">
 	     	<div class="navbar-header">
 	     		<a href="#" class="navbar-brand">欢迎来到本公司</a>	     		
