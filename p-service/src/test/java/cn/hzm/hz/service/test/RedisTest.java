@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import cn.hzm.hz.redis.RedisClientTemplate;
 import cn.hzm.hz.test.BaseTest;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.Transaction;
 
 public class RedisTest extends BaseTest{
 
@@ -35,13 +36,16 @@ public class RedisTest extends BaseTest{
        
 	}
 	
-	/*@Test
+	//s事务
+	@Test
 	public void test1(){
-		Jedis jedis = new Jedis("127.0.0.1", 6379);  
-        System.out.println(jedis);  
-        String ping = jedis.ping();  
-        System.out.println(ping);  
-		ru.set("ru", "111");
-		System.out.println(ru.get("ru"));
-	}*/
+		Jedis jedis = new Jedis("127.0.0.1", 6379);
+        Transaction  t = jedis.multi();
+        t.set("k5", "v5");
+        t.set("k6", "v6");
+        t.exec();
+        System.out.println(jedis.get("k5"));
+        System.out.println(t.get("k6"));
+       
+	}
 }
