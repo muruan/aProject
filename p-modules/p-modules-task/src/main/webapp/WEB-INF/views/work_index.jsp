@@ -4,21 +4,21 @@
 <head>
 
 <title>Insert title here</title>
-<link  href="..css/bs/bootstrap.css" rel="stylesheet" type="text/css" >
-<link  href="..css/common/footer.css" rel="stylesheet" type="text/css" >
-<script type="text/javascript"></script>
-<script src="../js/jquery/jquery-3.2.1.min.js"></script>
-<script src="../js/bs/bootstrap.js"></script>
+<link  href="${pageContext.request.contextPath}/css/bs/bootstrap.css" rel="stylesheet" type="text/css" >
+<link  href="${pageContext.request.contextPath}/css/common/footer.css" rel="stylesheet" type="text/css" >
+<script src="${pageContext.request.contextPath}/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/bs/bootstrap.js"></script>
 <script>
 
 $(document).ready(function() { 
-	alert(1);
+	console.log("${user}");
 	var a = $("#nav3").hasClass("active");
 	console.log(a);
 	alert(a);
-};
+});
 </script>
 <%@include file="../common/header.jsp"%>
+
 <%@include file="../common/footer.jsp"%>
 
 </head>
